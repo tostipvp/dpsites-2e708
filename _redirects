@@ -1,0 +1,23 @@
+# =====================================================================
+# _redirects — Netlify leest dit bestand bij ELKE deploy, ook bij drag-and-drop.
+# 1) Interne bestanden afschermen: "404!" forceert een 404, ook al bestaat het bestand.
+#    Zo zijn je belscript, README en bronbestanden niet openbaar te lezen.
+# =====================================================================
+/README.md                   /404.html   404!
+/OPLEVERING.md               /404.html   404!
+/telefoonpitch-websites.md   /404.html   404!
+/prompt-showcase-websites.txt /404.html  404!
+/netlify.toml                /404.html   404!
+/content/*                   /404.html   404!
+/templates/*                 /404.html   404!
+/components/*                /404.html   404!
+/deploy/*                    /404.html   404!
+/api/*                       /404.html   404!
+/.claude/*                   /404.html   404!
+
+# 2) Korte links die je makkelijk aan de telefoon noemt: "ga naar [DOMEIN]/offerte"
+/offerte     /contact.html                              301
+/voorbeeld   /contact.html?aanvraag=gratis-voorbeeld    301
+/diensten    /services.html                             301
+/prijzen     /pricing.html                              301
+/over        /about.html                                301

@@ -1,0 +1,60 @@
+<!-- =====================================================================
+     COMPONENT: booking-form.html  (vervangt form.html uit blueprint-starter)
+     Offerte-/demo-aanvraag: naam, telefoon, e-mail, type website, omschrijving.
+     - Netlify Forms: werkt direct na deploy (data-netlify + form-name).
+       Gebruik per pagina een eigen name (contact: "offerte", home: "offerte-home").
+     - Formspree: voeg data-endpoint="https://formspree.io/f/JOUW_ID" toe en
+       verwijder data-netlify + netlify-honeypot.
+     - Vercel/eigen server: data-endpoint="/api/contact" (zie api/contact.js).
+     - Validatie + verzenden: scripts/main.js onderdeel 7 (form[data-validate]).
+     - Voorselectie via de link: contact.html?type=nieuw&aanvraag=gratis-voorbeeld
+     - Anti-spam: honeypot "website" + tijdval (3 s).
+     - Bevestigingsmail: tekst in templates/email-notificatie.txt (README §4).
+     ===================================================================== -->
+<form class="form-card stack" id="formulier" name="offerte" method="POST" action="bedankt.html"
+      data-netlify="true" netlify-honeypot="website" data-validate novalidate aria-labelledby="form-titel">
+  <input type="hidden" name="form-name" value="offerte">
+  <input type="hidden" name="page_url"><input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign">
+  <h2 id="form-titel" class="h3">Vertel over je bedrijf</h2>
+
+  <fieldset class="choice">
+    <legend>Wat wil je ontvangen?</legend>
+    <div class="choice-options">
+      <label><input type="radio" name="aanvraag" value="offerte" checked> Een offerte</label>
+      <label><input type="radio" name="aanvraag" value="gratis-voorbeeld"> Een gratis voorbeeld</label>
+    </div>
+  </fieldset>
+  <div class="field-row">
+    <div class="field"><label for="f-naam">Je naam (verplicht)</label>
+      <input id="f-naam" name="name" autocomplete="name" required minlength="2" maxlength="80" data-label="naam" aria-describedby="f-naam-error">
+      <p id="f-naam-error" class="field-error" hidden></p></div>
+    <!-- Pattern: haakjes en streepje zijn ge-escaped, anders is het patroon ongeldig in moderne browsers (v-flag) -->
+    <div class="field"><label for="f-telefoon">Telefoonnummer (verplicht)</label>
+      <input id="f-telefoon" name="phone" type="tel" autocomplete="tel" inputmode="tel" required pattern="[+0-9 \(\)\-]{10,20}" data-label="telefoonnummer" aria-describedby="f-telefoon-error">
+      <p id="f-telefoon-error" class="field-error" hidden></p></div>
+  </div>
+  <div class="field"><label for="f-email">E-mailadres (verplicht)</label>
+    <input id="f-email" name="email" type="email" autocomplete="email" required data-label="e-mailadres" aria-describedby="f-email-error">
+    <p id="f-email-error" class="field-error" hidden></p></div>
+  <div class="field"><label for="f-type">Wat voor website zoek je? (verplicht)</label>
+    <select id="f-type" name="type" required data-msg="Kies wat voor website je zoekt." aria-describedby="f-type-error">
+      <option value="">Maak een keuze</option>
+      <option value="nieuw">Nieuwe website (vanaf €500)</option>
+      <option value="vernieuwen">Bestaande website vernieuwen (vanaf €500)</option>
+      <option value="hosting">Hosting en onderhoud (€20 per maand)</option>
+      <option value="maatwerk">Maatwerk: webshop, reserveren, meertalig (op aanvraag)</option>
+      <option value="weet-niet">Weet ik nog niet</option>
+    </select>
+    <p id="f-type-error" class="field-error" hidden></p></div>
+  <div class="field"><label for="f-bericht">Vertel kort over je bedrijf en je wensen</label>
+    <textarea id="f-bericht" name="message" maxlength="1000" aria-describedby="f-bericht-hint"
+              placeholder="Bijvoorbeeld: kapsalon met 3 stoelen, ik wil dat klanten online een afspraak kunnen maken."></textarea>
+    <p id="f-bericht-hint" class="field-hint" data-counter>0 / 1000 tekens</p></div>
+
+  <!-- Honeypot: onzichtbaar voor mensen, bots vullen het in. NIET verwijderen. -->
+  <p class="hp" aria-hidden="true"><label for="f-website">Laat dit veld leeg</label><input id="f-website" name="website" tabindex="-1" autocomplete="off"></p>
+
+  <button class="btn btn-accent btn-lg w-full" type="submit">Verstuur aanvraag</button>
+  <p class="small muted">Vrijblijvend. Ik gebruik je gegevens alleen om contact met je op te nemen. Lees de <a href="privacy.html">privacyverklaring</a>.</p>
+  <p class="form-status" role="status" tabindex="-1"></p>
+</form>

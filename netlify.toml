@@ -1,0 +1,23 @@
+# =====================================================================
+# netlify.toml — build-instellingen voor Netlify.
+# De build zet de CMS-inhoud (content/*.json) in de HTML en schrijft de
+# site naar dist/. Headers en redirects staan in _headers en _redirects.
+# =====================================================================
+[build]
+  publish = "dist"
+  command = "node cms/build.mjs"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# OPTIONEEL: Lighthouse-rapport bij elke Git-deploy (Netlify build plugin).
+# Activeren: haal de #-tekens weg en installeer de plugin, óf via de Netlify-UI
+# (Extensions/Plugins → "Lighthouse"), óf lokaal: npm install -D @netlify/plugin-lighthouse
+# De deploy faalt als een score onder de drempel komt (0.9 = 90).
+# [[plugins]]
+#   package = "@netlify/plugin-lighthouse"
+#   [plugins.inputs.thresholds]
+#     performance = 0.9
+#     accessibility = 0.9
+#     best-practices = 0.9
+#     seo = 0.9

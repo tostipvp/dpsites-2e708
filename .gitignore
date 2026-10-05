@@ -1,0 +1,11 @@
+# Gebouwde site: Netlify maakt die zelf bij elke deploy
+dist/
+node_modules/
+.netlify/
+.claude/
+
+# Privé: verkoopmateriaal blijft alleen op deze computer (de repository is openbaar)
+telefoonpitch-websites.md
+prompt-showcase-websites.txt
+OPLEVERING.md
+content/demo-pitch.md

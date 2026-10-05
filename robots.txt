@@ -1,0 +1,8 @@
+# Domein: dpsites.nl
+User-agent: *
+Disallow: /bedankt.html
+Disallow: /components/
+Disallow: /templates/
+Disallow: /content/
+
+Sitemap: https://dpsites.nl/sitemap.xml

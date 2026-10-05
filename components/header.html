@@ -1,0 +1,32 @@
+<!-- =====================================================================
+     COMPONENT: header.html  (hergebruikt uit blueprint-starter, aangepast)
+     Plak direct na <body> op elke pagina. Staat de pagina in een submap,
+     zet dan "../" voor alle links. De actieve pagina krijgt automatisch
+     aria-current="page" via scripts/main.js (onderdeel 3).
+     VERVANG bij een ander bedrijf:
+       [BEDRIJFSNAAM] = dpsites          (aria-label + logo)
+       [TELEFOON]     = 0610582559          (2× tel:-link + zichtbaar nummer)
+       [PRIMAIRE_CTA] = Vraag offerte aan   (blauwe knop)
+     ===================================================================== -->
+<a class="skip-link" href="#main">Naar inhoud</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <!-- Logo: blauwe "dp"-blok + woordmerk. Eigen logo? Vervang de twee spans door een inline <svg> (hoogte 32–40px). -->
+    <a href="index.html" class="logo" aria-label="dpsites, naar de homepage"><span class="logo-mark" aria-hidden="true">dp</span><span aria-hidden="true">sites</span></a>
+    <!-- Alleen mobiel: rond belicoon (click-to-call) -->
+    <a class="icon-btn call-icon" href="tel:0610582559" aria-label="Bel Don: 0610582559"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#phone"></use></svg></a>
+    <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="hoofdmenu"><span class="sr-only">Menu</span><span class="burger" aria-hidden="true"></span></button>
+    <nav id="hoofdmenu" class="primary-nav" aria-label="Hoofdmenu">
+      <ul role="list">
+        <li><a href="services.html">Diensten</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="pricing.html">Prijzen</a></li>
+        <li><a href="about.html">Over mij</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <!-- Desktop: telefoonnummer (tussen 1024–1200px alleen het icoon, nummer blijft voorleesbaar) -->
+      <a class="nav-call" href="tel:0610582559"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#phone"></use></svg><span class="nav-call-nr">0610582559</span></a>
+      <a class="btn btn-accent" href="contact.html#formulier">Vraag offerte aan</a>
+    </nav>
+  </div>
+</header>

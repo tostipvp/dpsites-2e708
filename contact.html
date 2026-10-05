@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Title-patroon: Contact en offerte | dpsites [PLAATS] -->
+  <title>Offerte aanvragen of bellen | dpsites</title>
+  <meta name="description" content="Vraag een offerte of gratis voorbeeld aan bij dpsites. Bel 0610582559 of mail donvandriel08@hotmail.com. Reactie binnen 1 werkdag.">
+  <link rel="canonical" href="https://dpsites.nl/contact.html">
+  <meta name="theme-color" content="#0B0B0C">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="dpsites">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:title" content="Vraag een offerte of gratis voorbeeld aan | dpsites">
+  <meta property="og:description" content="Bel 0610582559 of vul het formulier in. Reactie binnen 1 werkdag.">
+  <meta property="og:url" content="https://dpsites.nl/contact.html">
+  <meta property="og:image" content="https://dpsites.nl/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.bunny.net" crossorigin>
+  <link rel="stylesheet" href="https://fonts.bunny.net/css?family=bricolage-grotesque:700,800|figtree:400,500,600,700&display=swap">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Naar inhoud</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="dpsites, naar de homepage"><span class="logo-mark" aria-hidden="true">dp</span><span aria-hidden="true">sites</span></a>
+    <a class="icon-btn call-icon" href="tel:0610582559" aria-label="Bel Don: 0610582559"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#phone"></use></svg></a>
+    <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="hoofdmenu"><span class="sr-only">Menu</span><span class="burger" aria-hidden="true"></span></button>
+    <nav id="hoofdmenu" class="primary-nav" aria-label="Hoofdmenu">
+      <ul role="list">
+        <li><a href="services.html">Diensten</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="pricing.html">Prijzen</a></li>
+        <li><a href="about.html">Over mij</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a class="nav-call" href="tel:0610582559"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#phone"></use></svg><span class="nav-call-nr">0610582559</span></a>
+      <a class="btn btn-accent" href="contact.html#formulier">Vraag offerte aan</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero hero-sm" aria-labelledby="hero-titel">
+    <div class="container stack">
+      <h1 id="hero-titel">Vraag een offerte of gratis voorbeeld aan</h1>
+      <p class="lead">Vul het formulier in, dan hoor je binnen 1 werkdag van me. Liever meteen praten? Bel gerust.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Contactformulier en gegevens">
+    <div class="container layout-sidebar">
+      <!-- FORMULIER (bron: components/booking-form.html). Netlify Forms; zie README §4 voor beheer. -->
+      <form class="form-card stack" id="formulier" name="offerte" method="POST" action="bedankt.html"
+            data-netlify="true" netlify-honeypot="website" data-validate novalidate aria-labelledby="form-titel">
+        <input type="hidden" name="form-name" value="offerte">
+        <input type="hidden" name="page_url"><input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign">
+        <h2 id="form-titel" class="h3">Vertel over je bedrijf</h2>
+        <fieldset class="choice">
+          <legend>Wat wil je ontvangen?</legend>
+          <div class="choice-options">
+            <label><input type="radio" name="aanvraag" value="offerte" checked> Een offerte</label>
+            <label><input type="radio" name="aanvraag" value="gratis-voorbeeld"> Een gratis voorbeeld</label>
+          </div>
+        </fieldset>
+        <div class="field-row">
+          <div class="field"><label for="f-naam">Je naam (verplicht)</label>
+            <input id="f-naam" name="name" autocomplete="name" required minlength="2" maxlength="80" data-label="naam" aria-describedby="f-naam-error">
+            <p id="f-naam-error" class="field-error" hidden></p></div>
+          <div class="field"><label for="f-telefoon">Telefoonnummer (verplicht)</label>
+            <input id="f-telefoon" name="phone" type="tel" autocomplete="tel" inputmode="tel" required pattern="[+0-9 \(\)\-]{10,20}" data-label="telefoonnummer" aria-describedby="f-telefoon-error">
+            <p id="f-telefoon-error" class="field-error" hidden></p></div>
+        </div>
+        <div class="field"><label for="f-email">E-mailadres (verplicht)</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required data-label="e-mailadres" aria-describedby="f-email-error">
+          <p id="f-email-error" class="field-error" hidden></p></div>
+        <div class="field"><label for="f-type">Wat voor website zoek je? (verplicht)</label>
+          <select id="f-type" name="type" required data-msg="Kies wat voor website je zoekt." aria-describedby="f-type-error">
+            <option value="">Maak een keuze</option>
+            <option value="nieuw">Nieuwe website (vanaf <!--cms:text plannen.items[id=nieuw].prijs-->€500<!--/cms-->)</option>
+            <option value="vernieuwen">Bestaande website vernieuwen (vanaf <!--cms:text plannen.items[id=vernieuwen].prijs-->€500<!--/cms-->)</option>
+            <option value="hosting">Hosting en onderhoud (<!--cms:text plannen.items[id=hosting].prijs-->€20<!--/cms--> per maand)</option>
+            <option value="maatwerk">Maatwerk: webshop, reserveren, meertalig (op aanvraag)</option>
+            <option value="weet-niet">Weet ik nog niet</option>
+          </select>
+          <p id="f-type-error" class="field-error" hidden></p></div>
+        <div class="field"><label for="f-bericht">Vertel kort over je bedrijf en je wensen</label>
+          <textarea id="f-bericht" name="message" maxlength="1000" aria-describedby="f-bericht-hint"
+                    placeholder="Bijvoorbeeld: kapsalon met 3 stoelen, ik wil dat klanten online een afspraak kunnen maken."></textarea>
+          <p id="f-bericht-hint" class="field-hint" data-counter>0 / 1000 tekens</p></div>
+        <p class="hp" aria-hidden="true"><label for="f-website">Laat dit veld leeg</label><input id="f-website" name="website" tabindex="-1" autocomplete="off"></p>
+        <button class="btn btn-accent btn-lg w-full" type="submit">Verstuur aanvraag</button>
+        <p class="small muted">Vrijblijvend. Ik gebruik je gegevens alleen om contact met je op te nemen. Lees de <a href="privacy.html">privacyverklaring</a>.</p>
+        <p class="form-status" role="status" tabindex="-1"></p>
+      </form>
+
+      <aside class="stack-lg sticky-side" aria-label="Direct contact">
+        <div class="call-card">
+          <p>Liever direct praten?</p>
+          <a class="call-big" href="tel:0610582559">0610582559</a>
+          <p class="small">Of mail naar <a href="mailto:donvandriel08@hotmail.com">donvandriel08@hotmail.com</a></p>
+          <p class="small">Ik reageer binnen 1 werkdag.</p>
+        </div>
+        <div class="stack">
+          <h2 class="h3">Wat gebeurt er na je aanvraag?</h2>
+          <ol class="steps steps-stack" role="list">
+            <li class="step"><span class="step-num" aria-hidden="true">1</span><p class="muted">Ik bel of mail je binnen 1 werkdag.</p></li>
+            <li class="step"><span class="step-num" aria-hidden="true">2</span><p class="muted">We bespreken in een kwartier wat je zaak nodig heeft.</p></li>
+            <li class="step"><span class="step-num" aria-hidden="true">3</span><p class="muted">Je krijgt een offerte met vaste prijs, of een gratis voorbeeld.</p></li>
+          </ol>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section bg-alt" id="faq" aria-labelledby="faq-titel">
+    <div class="container narrow">
+      <div class="section-head"><h2 id="faq-titel">Veelgestelde vragen</h2></div>
+      <div class="faq">
+        <details class="accordion"><summary>Kost een gesprek of voorbeeld iets?</summary><p>Nee. Het kennismakingsgesprek en het voorbeeld van je homepage zijn gratis en vrijblijvend.</p></details>
+        <details class="accordion"><summary>Hoe snel kan mijn website online staan?</summary><p>Meestal binnen 2 tot 3 weken na akkoord. Heb je haast, zeg het dan; soms kan het sneller.</p></details>
+        <details class="accordion"><summary>Ik heb al een domeinnaam. Kan ik die houden?</summary><p>Ja. Je houdt je eigen domeinnaam. Ik leg stap voor stap uit hoe je de nieuwe website eraan koppelt, of ik doe het samen met je.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="index.html" class="logo" aria-label="dpsites, naar de homepage"><span class="logo-mark" aria-hidden="true">dp</span><span aria-hidden="true">sites</span></a>
+      <p>Websites voor lokale ondernemers, gebouwd door Don van Driel.</p>
+    </div>
+    <nav aria-label="Footermenu">
+      <h2 class="footer-title">Pagina's</h2>
+      <ul role="list"><li><a href="services.html">Diensten</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="pricing.html">Prijzen</a></li><li><a href="about.html">Over mij</a></li><li><a href="contact.html">Contact</a></li></ul>
+    </nav>
+    <div>
+      <h2 class="footer-title">Contact</h2>
+      <address><a href="tel:0610582559">0610582559</a><a href="mailto:donvandriel08@hotmail.com">donvandriel08@hotmail.com</a><span>Reactie binnen 1 werkdag</span></address>
+    </div>
+    <div>
+      <h2 class="footer-title">Gratis voorbeeld</h2>
+      <p>Benieuwd hoe jouw website eruitziet? Ik maak vrijblijvend een voorbeeld.</p>
+      <p><a class="btn btn-accent" href="contact.html?aanvraag=gratis-voorbeeld#formulier">Vraag gratis voorbeeld aan</a></p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span data-year>2026</span> dpsites</span>
+    <!-- VERPLICHT zodra je bij de KvK staat ingeschreven: haal de commentaartekens weg en vul het nummer in.
+    <span>KvK [KVK]</span> -->
+    <a href="privacy.html">Privacyverklaring</a>
+  </div>
+</footer>
+<div class="sticky-cta" data-hidden="true">
+  <a class="btn btn-primary" href="tel:0610582559"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#phone"></use></svg>Bel nu</a>
+  <a class="btn btn-accent" href="#formulier">Vraag offerte aan</a>
+</div>
+</body>
+</html>

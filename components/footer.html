@@ -1,0 +1,43 @@
+<!-- =====================================================================
+     COMPONENT: footer.html  (hergebruikt uit blueprint-starter, aangepast)
+     Plak vóór </body> op elke pagina, samen met de vaste CTA-balk.
+     VERVANG bij een ander bedrijf: [BEDRIJFSNAAM] = dpsites,
+     [TELEFOON] = 0610582559, [EMAIL] = donvandriel08@hotmail.com,
+     [PRIMAIRE_CTA] = Vraag offerte aan, [KVK] = je KvK-nummer.
+     Let op: een <address> mag geen koppen bevatten; de kop staat erboven.
+     ===================================================================== -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="index.html" class="logo" aria-label="dpsites, naar de homepage"><span class="logo-mark" aria-hidden="true">dp</span><span aria-hidden="true">sites</span></a>
+      <p>Websites voor lokale ondernemers, gebouwd door Don van Driel.</p>
+    </div>
+    <nav aria-label="Footermenu">
+      <h2 class="footer-title">Pagina's</h2>
+      <ul role="list"><li><a href="services.html">Diensten</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="pricing.html">Prijzen</a></li><li><a href="about.html">Over mij</a></li><li><a href="contact.html">Contact</a></li></ul>
+    </nav>
+    <div>
+      <h2 class="footer-title">Contact</h2>
+      <address><a href="tel:0610582559">0610582559</a><a href="mailto:donvandriel08@hotmail.com">donvandriel08@hotmail.com</a><span>Reactie binnen 1 werkdag</span></address>
+    </div>
+    <div>
+      <h2 class="footer-title">Gratis voorbeeld</h2>
+      <p>Benieuwd hoe jouw website eruitziet? Ik maak vrijblijvend een voorbeeld.</p>
+      <p><a class="btn btn-accent" href="contact.html?aanvraag=gratis-voorbeeld#formulier">Vraag gratis voorbeeld aan</a></p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span data-year>2026</span> dpsites</span>
+    <!-- VERPLICHT zodra je bij de KvK staat ingeschreven: haal de commentaartekens weg en vul het nummer in.
+    <span>KvK [KVK]</span> -->
+    <a href="privacy.html">Privacyverklaring</a>
+  </div>
+</footer>
+
+<!-- Vaste CTA: balk onderin op mobiel, zwevend blok rechtsonder op desktop.
+     Verschijnt na 400px scrollen (main.js onderdeel 2). Op de homepage wijst de
+     offerteknop naar #offerte, op contact.html naar #formulier. -->
+<div class="sticky-cta" data-hidden="true">
+  <a class="btn btn-primary" href="tel:0610582559"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#phone"></use></svg>Bel nu</a>
+  <a class="btn btn-accent" href="contact.html#formulier">Vraag offerte aan</a>
+</div>

@@ -1,0 +1,95 @@
+=====================================================================
+1. NOTIFICATIE AAN DON (bij elke nieuwe aanvraag)
+   Netlify: Site configuration → Notifications → Emails and webhooks →
+   Form submission notifications → Add notification → Email notification.
+   Netlify gebruikt een vaste opmaak; deze tekst is voor Zapier/Make of api/contact.js.
+=====================================================================
+Aan:       donvandriel08@hotmail.com
+Reply-To:  {email}
+Onderwerp: Nieuwe aanvraag ({aanvraag}): {type} van {name}
+
+Er is een nieuwe aanvraag binnengekomen via de website van dpsites.
+
+Wil:        {aanvraag}          (offerte of gratis-voorbeeld)
+Naam:       {name}
+Telefoon:   {phone}             ← bel binnen 1 werkdag
+E-mail:     {email}             ← beantwoord deze mail om direct te reageren
+Website:    {type}
+
+Omschrijving:
+{message}
+
+---
+Formulier:  {form-name}
+Pagina:     {page_url}
+Bron:       {utm_source} / {utm_medium} / {utm_campaign}
+
+
+=====================================================================
+2. BEVESTIGINGSMAIL AAN DE KLANT
+   Netlify Forms verstuurt dit NIET automatisch. Opties: Zapier of Make
+   (trigger: nieuwe Netlify-formulierinzending → e-mail sturen), de
+   autoresponse-functie van Formspree, of handmatig als snel antwoord.
+=====================================================================
+Van:       Don van Driel | dpsites <donvandriel08@hotmail.com>
+Aan:       {email}
+Onderwerp: Je aanvraag is binnen, {voornaam}
+
+Hoi {voornaam},
+
+Bedankt voor je aanvraag! Ik heb hem goed ontvangen en neem binnen
+1 werkdag contact met je op, meestal eerder.
+
+Dit heb je gestuurd:
+- Je wilt: {aanvraag}
+- Type website: {type}
+- Omschrijving: "{message}"
+
+Wat gebeurt er nu?
+1. Ik bekijk je bedrijf en je huidige website.
+2. Ik bel je voor een kort gesprek van een kwartier.
+3. Je krijgt een offerte met vaste prijs, of een gratis voorbeeld van je homepage.
+
+Wil je nog iets toevoegen, zoals je logo of foto's? Beantwoord dan gewoon deze mail.
+Liever direct bellen? Dat kan op 0610582559.
+
+Groet,
+
+Don van Driel
+dpsites | 0610582559 | donvandriel08@hotmail.com
+
+
+=====================================================================
+3. TESTLINK STUREN (na het maken van een staging-preview, zie README §6)
+=====================================================================
+Onderwerp: Het voorbeeld van je nieuwe website staat klaar
+
+Hoi {voornaam},
+
+Zoals beloofd: hier is het voorbeeld van de nieuwe website voor {bedrijfsnaam}.
+{testlink}
+
+Dit is een privé-testversie. Hij is nog niet openbaar en je zit nergens aan vast.
+Bekijk hem rustig op je telefoon én op de computer, en noteer wat je opvalt.
+Ik bel je {dag} om {tijd} om het samen door te nemen.
+
+Groet,
+Don van Driel | 0610582559
+
+
+=====================================================================
+4. REVIEW-VERZOEK (1 à 2 weken na oplevering, als de klant tevreden is)
+=====================================================================
+WhatsApp / sms:
+Hoi {voornaam}, Don hier van dpsites. Fijn dat je nieuwe website live staat!
+Zou je in twee zinnen willen vertellen hoe je de samenwerking vond? Dat helpt
+andere ondernemers enorm. Hier kan het: {reviewlink}. Alvast bedankt!
+
+E-mail, onderwerp: Mag ik je iets vragen?
+Hoi {voornaam}, je website staat nu {x} weken online. Ik ben benieuwd hoe het
+bevalt! Wil je een korte review achterlaten? Het kost een minuut: {reviewlink}
+Met je toestemming zet ik hem ook op mijn website (alleen je voornaam en branche).
+
+{reviewlink} = je Google-reviewlink (in je Google Bedrijfsprofiel staat een knop om
+               reviews te vragen; die geeft een deelbare link), of zolang je die nog
+               niet hebt: een antwoord op deze mail.

@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Title-patroon: Prijzen [dienst] | dpsites -->
+  <title>Prijzen: nieuwe website vanaf €500 | dpsites</title>
+  <meta name="description" content="Nieuwe website vanaf €500, website vernieuwen vanaf €500, hosting en onderhoud €20 per maand. Eerst een gratis voorbeeld, betalen in twee delen.">
+  <link rel="canonical" href="https://dpsites.nl/pricing.html">
+  <meta name="theme-color" content="#0B0B0C">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="dpsites">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:title" content="Vaste prijzen, vooraf duidelijk | dpsites">
+  <meta property="og:description" content="Nieuwe website of vernieuwen vanaf €500, hosting voor €20 per maand.">
+  <meta property="og:url" content="https://dpsites.nl/pricing.html">
+  <meta property="og:image" content="https://dpsites.nl/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.bunny.net" crossorigin>
+  <link rel="stylesheet" href="https://fonts.bunny.net/css?family=bricolage-grotesque:700,800|figtree:400,500,600,700&display=swap">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Naar inhoud</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="dpsites, naar de homepage"><span class="logo-mark" aria-hidden="true">dp</span><span aria-hidden="true">sites</span></a>
+    <a class="icon-btn call-icon" href="tel:0610582559" aria-label="Bel Don: 0610582559"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#phone"></use></svg></a>
+    <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="hoofdmenu"><span class="sr-only">Menu</span><span class="burger" aria-hidden="true"></span></button>
+    <nav id="hoofdmenu" class="primary-nav" aria-label="Hoofdmenu">
+      <ul role="list">
+        <li><a href="services.html">Diensten</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="pricing.html">Prijzen</a></li>
+        <li><a href="about.html">Over mij</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a class="nav-call" href="tel:0610582559"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#phone"></use></svg><span class="nav-call-nr">0610582559</span></a>
+      <a class="btn btn-accent" href="contact.html#formulier">Vraag offerte aan</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero hero-sm" aria-labelledby="hero-titel">
+    <div class="container stack">
+      <h1 id="hero-titel">Vaste prijzen, vooraf duidelijk</h1>
+      <!-- BTW: gebruik je de kleineondernemersregeling (KOR)? Vervang "exclusief btw" dan overal door "geen btw". -->
+      <p class="lead">Vaste prijzen, exclusief btw. Voor een nieuwe of vernieuwde website betaal je 50% bij akkoord en 50% bij oplevering, als je tevreden bent.</p>
+    </div>
+  </section>
+
+  <!-- PAKKETTEN: PRIJZEN ZIJN VOORBEELDWAARDEN, pas ze aan naar je eigen tarieven. -->
+  <section class="section" aria-label="Pakketten">
+    <div class="container">
+      <div class="plans">
+        <!--cms:list plannen.items--><template data-cms-tpl>
+        <article class="plan{{if aanrader}} plan-featured{{/if}}" aria-labelledby="p-{{id}}">
+          {{if aanrader}}<span class="badge">Aanrader</span>
+          {{/if}}<h2 id="p-{{id}}" class="h3">{{naam}}</h2>
+          <p class="muted">{{omschrijving}}</p>
+          <p class="price">{{if vanaf}}<span class="price-from">Vanaf</span>{{/if}}{{prijs}}<small>{{prijs_toelichting}}</small></p>
+          <a class="btn {{if aanrader}}btn-accent{{else}}btn-outline{{/if}} w-full" href="contact.html?type={{id}}#formulier">{{knoptekst}}</a>
+          <ul class="checklist" role="list">
+{{each kenmerken}}            <li><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg>{{.}}</li>
+{{/each}}          </ul>
+        </article></template>
+        <article class="plan plan-featured" aria-labelledby="p-nieuw">
+          <span class="badge">Aanrader</span>
+          <h2 id="p-nieuw" class="h3">Nieuwe website</h2>
+          <p class="muted">Voor ondernemers zonder website, of met alleen een Facebookpagina.</p>
+          <p class="price"><span class="price-from">Vanaf</span>€500<small>eenmalig, excl. btw</small></p>
+          <a class="btn btn-accent w-full" href="contact.html?type=nieuw#formulier">Kies nieuwe website</a>
+          <ul class="checklist" role="list">
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg>Onepage of tot 5 pagina's</li>
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg>Ontwerp in jouw huisstijl</li>
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg>Belknop en contactformulier op elke pagina</li>
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg>Werkt op telefoon, tablet en computer</li>
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg>Basis voor Google: titels, beschrijvingen, sitemap</li>
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg>Webteksten die ik samen met jou schrijf</li>
+          </ul>
+        </article>
+        <article class="plan" aria-labelledby="p-vernieuwen">
+          <h2 id="p-vernieuwen" class="h3">Website vernieuwen</h2>
+          <p class="muted">Voor wie al een website heeft die traag of verouderd is.</p>
+          <p class="price"><span class="price-from">Vanaf</span>€500<small>eenmalig, excl. btw</small></p>
+          <a class="btn btn-outline w-full" href="contact.html?type=vernieuwen#formulier">Kies vernieuwen</a>
+          <ul class="checklist" role="list">
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg>Korte check van je huidige site</li>
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg>Nieuw ontwerp met je bestaande inhoud, opgefrist</li>
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg>Werkt op telefoon, tablet en computer</li>
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg>Oude links doorgestuurd, zodat je vindbaar blijft</li>
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg>Je domeinnaam blijft gewoon van jou</li>
+          </ul>
+        </article>
+        <article class="plan" aria-labelledby="p-hosting">
+          <h2 id="p-hosting" class="h3">Hosting en onderhoud</h2>
+          <p class="muted">Voor wie zich niet met techniek wil bezighouden.</p>
+          <p class="price">€20<small>per maand, excl. btw</small></p>
+          <a class="btn btn-outline w-full" href="contact.html?type=hosting#formulier">Kies hosting</a>
+          <ul class="checklist" role="list">
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg>Snelle hosting met https</li>
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg>Kleine wijzigingen: openingstijden, prijzen, foto's</li>
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg>Maandelijkse controle op snelheid en werking</li>
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg>Back-up van je website</li>
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg>Maandelijks opzegbaar</li>
+          </ul>
+        </article>
+        <!--/cms-->
+      </div>
+
+      <div class="callout">
+        <div class="stack">
+          <h2 class="h3">Maatwerk: op aanvraag</h2>
+          <p class="muted">Een webshop, reserveringen of meerdere talen? Na een kort gesprek krijg je een vaste prijs.</p>
+        </div>
+        <a class="btn btn-outline" href="contact.html?type=maatwerk#formulier">Vraag maatwerk aan</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-alt" aria-labelledby="betalen-titel">
+    <div class="container">
+      <div class="section-head"><h2 id="betalen-titel">Zo werkt betalen</h2></div>
+      <ol class="steps steps-3" role="list">
+        <li class="step"><span class="step-num" aria-hidden="true">1</span><h3>Gratis voorbeeld</h3><p class="muted">Je ziet eerst hoe je website eruit gaat zien. Dat kost niets.</p></li>
+        <li class="step"><span class="step-num" aria-hidden="true">2</span><h3>50% bij akkoord</h3><p class="muted">Enthousiast? Dan betaal je de helft en begin ik met bouwen.</p></li>
+        <li class="step"><span class="step-num" aria-hidden="true">3</span><h3>50% bij oplevering</h3><p class="muted">De rest betaal je pas als de website af is en jij tevreden bent.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="faq-titel">
+    <div class="container narrow">
+      <div class="section-head"><h2 id="faq-titel">Vragen over prijzen</h2></div>
+      <div class="faq">
+        <details class="accordion"><summary>Wat als ik het voorbeeld niet mooi vind?</summary><p>Dan zeg je dat gewoon. Het voorbeeld is gratis en je zit nergens aan vast.</p></details>
+        <details class="accordion"><summary>Wat kost een domeinnaam?</summary><p>Heb je al een domeinnaam, dan gebruiken we die. Een nieuwe .nl-domeinnaam kost bij de meeste aanbieders tussen de €5 en €15 per jaar. Ik help je met registreren en koppelen.</p></details>
+        <details class="accordion"><summary>Zijn er nog extra kosten?</summary><p>Alleen als je later iets extra's wilt. Dan krijg je vooraf een vaste prijs, zodat je nooit voor verrassingen staat.</p></details>
+        <details class="accordion"><summary>Moet ik zelf de teksten schrijven?</summary><p>Nee. Jij vertelt wat je doet, voor wie en wat het kost. Ik maak er heldere webteksten van en jij keurt ze goed.</p></details>
+        <details class="accordion"><summary>Kan ik later uitbreiden?</summary><p>Ja. Pagina's of functies toevoegen kan altijd. Je krijgt vooraf een vaste prijs.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta-band" aria-labelledby="cta-titel">
+    <div class="container stack-lg">
+      <div class="stack">
+        <h2 id="cta-titel">Twijfel je welk pakket past?</h2>
+        <p class="lead">Bel even. In een kwartier weet je wat je nodig hebt en wat het kost.</p>
+      </div>
+      <div class="cluster">
+        <a class="btn btn-accent btn-lg" href="contact.html#formulier">Vraag offerte aan</a>
+        <a class="call-big" href="tel:0610582559">0610582559</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="index.html" class="logo" aria-label="dpsites, naar de homepage"><span class="logo-mark" aria-hidden="true">dp</span><span aria-hidden="true">sites</span></a>
+      <p>Websites voor lokale ondernemers, gebouwd door Don van Driel.</p>
+    </div>
+    <nav aria-label="Footermenu">
+      <h2 class="footer-title">Pagina's</h2>
+      <ul role="list"><li><a href="services.html">Diensten</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="pricing.html">Prijzen</a></li><li><a href="about.html">Over mij</a></li><li><a href="contact.html">Contact</a></li></ul>
+    </nav>
+    <div>
+      <h2 class="footer-title">Contact</h2>
+      <address><a href="tel:0610582559">0610582559</a><a href="mailto:donvandriel08@hotmail.com">donvandriel08@hotmail.com</a><span>Reactie binnen 1 werkdag</span></address>
+    </div>
+    <div>
+      <h2 class="footer-title">Gratis voorbeeld</h2>
+      <p>Benieuwd hoe jouw website eruitziet? Ik maak vrijblijvend een voorbeeld.</p>
+      <p><a class="btn btn-accent" href="contact.html?aanvraag=gratis-voorbeeld#formulier">Vraag gratis voorbeeld aan</a></p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span data-year>2026</span> dpsites</span>
+    <!-- VERPLICHT zodra je bij de KvK staat ingeschreven: haal de commentaartekens weg en vul het nummer in.
+    <span>KvK [KVK]</span> -->
+    <a href="privacy.html">Privacyverklaring</a>
+  </div>
+</footer>
+<div class="sticky-cta" data-hidden="true">
+  <a class="btn btn-primary" href="tel:0610582559"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#phone"></use></svg>Bel nu</a>
+  <a class="btn btn-accent" href="contact.html#formulier">Vraag offerte aan</a>
+</div>
+</body>
+</html>

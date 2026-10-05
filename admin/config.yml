@@ -1,0 +1,77 @@
+# =====================================================================
+# Decap CMS — beheer van dpsites (decapcms.org/docs/configuration-options)
+# Wijzigingen worden opgeslagen in content/*.json in de GitHub-repository;
+# Netlify bouwt de site daarna automatisch opnieuw (node cms/build.mjs).
+# =====================================================================
+backend:
+  name: git-gateway          # inloggen via Netlify Identity, zonder GitHub-account
+  branch: main
+
+# Lokaal testen zonder login: start `npx decap-server` in de projectmap (zie README §CMS)
+local_backend: true
+
+locale: nl
+site_url: https://dpsites.nl
+display_url: https://dpsites.nl
+logo_url: /favicon.svg
+
+media_folder: images/uploads
+public_folder: /images/uploads
+
+collections:
+  - name: inhoud
+    label: Website-inhoud
+    editor:
+      preview: false
+    files:
+      - name: home
+        label: Homepage (bovenaan)
+        file: content/home.json
+        fields:
+          - { label: Grote kop, name: hero_titel, widget: string }
+          - { label: Tekst onder de kop, name: hero_tekst, widget: text }
+          - label: Vinkjes onder de knoppen
+            name: vinkjes
+            widget: list
+            summary: "{{fields.tekst}}"
+            fields:
+              - { label: Tekst, name: tekst, widget: string }
+
+      - name: plannen
+        label: Plannen en prijzen
+        file: content/plannen.json
+        fields:
+          - label: Plannen
+            name: items
+            widget: list
+            allow_add: false     # de plannen zijn gekoppeld aan het formulier en de links
+            summary: "{{fields.naam}}: {{fields.prijs}}"
+            fields:
+              - { label: Code, name: id, widget: hidden }
+              - { label: Naam, name: naam, widget: string }
+              - { label: "Label 'Aanrader' tonen", name: aanrader, widget: boolean, required: false }
+              - { label: Omschrijving (prijzenpagina), name: omschrijving, widget: string }
+              - { label: Korte omschrijving (homepage), name: korte_omschrijving, widget: string }
+              - { label: "Woord 'vanaf' voor de prijs", name: vanaf, widget: boolean, required: false }
+              - { label: Prijs, name: prijs, widget: string, hint: "Bijvoorbeeld €500" }
+              - { label: Toelichting onder de prijs, name: prijs_toelichting, widget: string, hint: "Bijvoorbeeld: eenmalig, excl. btw" }
+              - { label: Prijs is per maand, name: per_maand, widget: boolean, required: false }
+              - { label: Knoptekst, name: knoptekst, widget: string }
+              - label: Wat zit erin
+                name: kenmerken
+                widget: list
+                field: { label: Kenmerk, name: kenmerk, widget: string }
+
+      - name: reviews
+        label: Reviews
+        file: content/reviews.json
+        fields:
+          - label: Reviews
+            name: items
+            widget: list
+            summary: "{{fields.naam}}, {{fields.branche}}"
+            fields:
+              - { label: Review, name: tekst, widget: text }
+              - { label: Voornaam, name: naam, widget: string }
+              - { label: Branche, name: branche, widget: string }
+              - { label: "Label 'Voorbeeldreview' tonen", name: voorbeeld, widget: boolean, required: false, default: false }

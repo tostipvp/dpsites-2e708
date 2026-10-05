@@ -1,0 +1,62 @@
+{
+  "items": [
+    {
+      "per_maand": false,
+      "omschrijving": "Voor ondernemers zonder website, of met alleen een Facebookpagina.",
+      "korte_omschrijving": "Van eerste schets tot livegang, in jouw huisstijl.",
+      "vanaf": true,
+      "prijs_toelichting": "eenmalig, excl. btw",
+      "kenmerken": [
+        "Onepage of tot 5 pagina's",
+        "Ontwerp in jouw huisstijl",
+        "Belknop en contactformulier op elke pagina",
+        "Werkt op telefoon, tablet en computer",
+        "Basis voor Google: titels, beschrijvingen, sitemap",
+        "Webteksten die ik samen met jou schrijf"
+      ],
+      "prijs": "€500",
+      "aanrader": true,
+      "knoptekst": "Kies nieuwe website",
+      "id": "nieuw",
+      "naam": "Nieuwe website"
+    },
+    {
+      "per_maand": false,
+      "omschrijving": "Voor wie al een website heeft die traag of verouderd is.",
+      "korte_omschrijving": "Je oude site snel, modern en mobielvriendelijk.",
+      "vanaf": true,
+      "prijs_toelichting": "eenmalig, excl. btw",
+      "kenmerken": [
+        "Korte check van je huidige site",
+        "Nieuw ontwerp met je bestaande inhoud, opgefrist",
+        "Werkt op telefoon, tablet en computer",
+        "Oude links doorgestuurd, zodat je vindbaar blijft",
+        "Je domeinnaam blijft gewoon van jou"
+      ],
+      "prijs": "€500",
+      "aanrader": false,
+      "knoptekst": "Kies vernieuwen",
+      "id": "vernieuwen",
+      "naam": "Website vernieuwen"
+    },
+    {
+      "per_maand": true,
+      "omschrijving": "Voor wie zich niet met techniek wil bezighouden.",
+      "korte_omschrijving": "Online, veilig en actueel. Jij belt, ik pas aan.",
+      "vanaf": false,
+      "prijs_toelichting": "per maand, excl. btw",
+      "kenmerken": [
+        "Snelle hosting met https",
+        "Kleine wijzigingen: openingstijden, prijzen, foto's",
+        "Maandelijkse controle op snelheid en werking",
+        "Back-up van je website",
+        "Maandelijks opzegbaar"
+      ],
+      "prijs": "€20",
+      "aanrader": false,
+      "knoptekst": "Kies hosting",
+      "id": "hosting",
+      "naam": "Hosting en onderhoud"
+    }
+  ]
+}

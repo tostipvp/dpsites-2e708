@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- VERVANG dpsites.nl; voeg elke nieuwe pagina toe en dien de sitemap in bij Google Search Console -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://dpsites.nl/</loc></url>
+  <url><loc>https://dpsites.nl/services.html</loc></url>
+  <url><loc>https://dpsites.nl/portfolio.html</loc></url>
+  <url><loc>https://dpsites.nl/pricing.html</loc></url>
+  <url><loc>https://dpsites.nl/about.html</loc></url>
+  <url><loc>https://dpsites.nl/contact.html</loc></url>
+  <url><loc>https://dpsites.nl/privacy.html</loc></url>
+</urlset>

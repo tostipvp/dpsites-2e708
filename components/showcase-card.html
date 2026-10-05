@@ -1,0 +1,46 @@
+<!-- =====================================================================
+     COMPONENT: showcase-card.html  (vervangt card.html uit blueprint-starter)
+     Portfolio-card met een browsermockup in HTML/CSS: geen screenshot nodig,
+     altijd scherp, en de mini-site scrolt bij hover of toetsenbordfocus.
+     Zet cards in <ul class="showcase-grid" role="list">. De hele card is
+     klikbaar via .card-link (pseudo-element), zonder <a> om de card heen.
+     Thema's: kapsalon · installateur · restaurant · bakkerij (styles.css).
+
+     Liever een echte screenshot? Vervang <div class="demo-screen">…</div> door:
+     <img src="images/portfolio/naam-800.webp"
+          srcset="images/portfolio/naam-800.webp 800w, images/portfolio/naam-1600.webp 1600w"
+          sizes="(min-width: 768px) 50vw, 100vw" width="1600" height="1000"
+          alt="Homepage van [KLANT]" loading="lazy" decoding="async">
+     ===================================================================== -->
+<li class="showcase">
+  <div class="demo" data-theme="kapsalon">
+    <div class="demo-bar" aria-hidden="true"><i></i><i></i><i></i><span class="demo-url">knipperlicht.nl</span></div>
+    <div class="demo-screen" role="img" aria-label="Voorbeeldontwerp: website van Kapsalon Knipperlicht">
+      <div class="demo-page">
+        <div class="d-nav"><b>Kapsalon Knipperlicht</b><span class="d-links"><i></i><i></i><i></i></span><span class="d-call">Bel direct</span></div>
+        <div class="d-hero">
+          <div><p class="d-kop">Knippen zonder wachttijd.</p><p class="d-tekst">Plan online je afspraak, ook ’s avonds.</p><span class="d-btn">Maak een afspraak</span></div>
+          <div class="d-photo"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#b-kapsalon"></use></svg></div>
+        </div>
+        <div class="d-cards"><span>Knippen</span><span>Kleuren</span><span>Baard</span></div>
+        <div class="d-foot"><span class="d-stars">★★★★★ <b>4,9</b></span><span>Di–za 9:00–18:00</span></div>
+        <!-- Extra inhoud die pas bij de hover-scroll in beeld komt -->
+        <div class="d-more"><i></i><i></i><i></i></div><div class="d-footer"></div>
+      </div>
+    </div>
+  </div>
+  <div class="showcase-body">
+    <p class="tag">Kapsalon</p>
+    <h3><a class="card-link" href="portfolio.html#knipperlicht">Kapsalon Knipperlicht</a></h3>
+    <p class="muted">Afspraak maken in twee tikken, een heldere prijslijst en foto's van echt werk.</p>
+  </div>
+</li>
+
+<!-- Variant: review-card (voorbeeldreview). Vervang door een echte review en haal het label weg. -->
+<li>
+  <figure class="review">
+    <div class="review-meta"><span class="stars" role="img" aria-label="5 van 5 sterren">★★★★★</span><span class="tag tag-outline">Voorbeeldreview</span></div>
+    <blockquote><p>“[QUOTE: concreet resultaat in de woorden van de klant]”</p></blockquote>
+    <figcaption><strong>[VOORNAAM]</strong>, [BRANCHE]</figcaption>
+  </figure>
+</li>

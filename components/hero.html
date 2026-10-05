@@ -1,0 +1,63 @@
+<!-- =====================================================================
+     COMPONENT: hero.html  (hergebruikt uit blueprint-starter, herontworpen)
+     Links: headline + 2 CTA's (Vraag offerte aan / Bel nu) + vertrouwenspunten.
+     Rechts: interactieve browsermockup. De branche-knoppen wisselen kleuren
+     en teksten via THEMES in scripts/main.js (onderdeel 4). Zonder JavaScript
+     zie je de kapsalonversie en zijn de knoppen verborgen.
+     Nieuwe branche? Voeg een knop toe, een THEMES-regel in main.js, een
+     .demo[data-theme="…"]-regel in styles.css en een b-…-icoon in assets/icons.svg.
+     ===================================================================== -->
+<section class="hero" aria-labelledby="hero-titel">
+  <div class="container hero-grid">
+    <div class="stack-lg">
+      <div class="stack">
+        <h1 id="hero-titel">Een nieuwe website vanaf €500.</h1>
+        <p class="lead">Eerst een gratis voorbeeld, daarna pas beslissen. Ik ben Don van Driel van dpsites en bouw snelle, moderne websites voor lokale ondernemers, met de belknop en het offerteformulier precies waar je klanten ze zoeken.</p>
+      </div>
+      <div class="cluster">
+        <a class="btn btn-accent btn-lg" href="#offerte">Vraag offerte aan</a>
+        <a class="btn btn-primary btn-lg" href="tel:0610582559"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#phone"></use></svg>Bel nu <span class="btn-sub">0610582559</span></a>
+      </div>
+      <ul class="trust-list" role="list">
+        <li><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg>Bestaande website vernieuwen? Ook vanaf €500</li>
+        <li><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg>Hosting en onderhoud voor €20 per maand</li>
+        <li><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg>Vaste prijzen, exclusief btw, geen verrassingen</li>
+        <li><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#check"></use></svg>Binnen 1 werkdag reactie</li>
+      </ul>
+    </div>
+    <div>
+      <div class="switcher" role="group" aria-labelledby="switcher-titel" data-switcher="hero-demo">
+        <p id="switcher-titel" class="switcher-label">Kies een branche en zie de website veranderen</p>
+        <button class="chip" type="button" data-theme-btn="kapsalon" aria-pressed="true">Kapsalon</button>
+        <button class="chip" type="button" data-theme-btn="installateur" aria-pressed="false">Installateur</button>
+        <button class="chip" type="button" data-theme-btn="restaurant" aria-pressed="false">Restaurant</button>
+        <button class="chip" type="button" data-theme-btn="bakkerij" aria-pressed="false">Bakkerij</button>
+      </div>
+      <div class="demo" id="hero-demo" data-theme="kapsalon">
+        <div class="demo-bar" aria-hidden="true"><i></i><i></i><i></i><span class="demo-url" data-slot="url">knipperlicht.nl</span></div>
+        <!-- role="img": schermlezers horen één beschrijving i.p.v. alle nepteksten -->
+        <div class="demo-screen" role="img" data-slot="label" aria-label="Voorbeeld van een website voor een kapsalon">
+          <div class="demo-page">
+            <div class="d-nav"><b data-slot="naam">Kapsalon Knipperlicht</b><span class="d-links"><i></i><i></i><i></i></span><span class="d-call">Bel direct<i class="pin pin-1" aria-hidden="true">1</i></span></div>
+            <div class="d-hero">
+              <div>
+                <p class="d-kop" data-slot="kop">Knippen zonder wachttijd.</p>
+                <p class="d-tekst" data-slot="tekst">Plan online je afspraak, ook ’s avonds.</p>
+                <span class="d-btn"><span data-slot="cta">Maak een afspraak</span><i class="pin pin-2" aria-hidden="true">2</i></span>
+              </div>
+              <div class="d-photo"><svg viewBox="0 0 24 24"><use data-slot="icoon" href="assets/icons.svg#b-kapsalon"></use></svg></div>
+            </div>
+            <div class="d-cards"><span data-slot="k1">Knippen</span><span data-slot="k2">Kleuren</span><span data-slot="k3">Baard</span><i class="pin pin-3" aria-hidden="true">3</i></div>
+            <div class="d-foot"><span class="d-stars">★★★★★ <b>4,9</b></span><span data-slot="uren">Di–za 9:00–18:00</span><i class="pin pin-4" aria-hidden="true">4</i></div>
+          </div>
+        </div>
+      </div>
+      <ol class="demo-legend" role="list">
+        <li><span class="pin-num" aria-hidden="true">1</span>Belknop die altijd in beeld blijft</li>
+        <li><span class="pin-num" aria-hidden="true">2</span>Eén duidelijke actie: afspraak, reservering of bestelling</li>
+        <li><span class="pin-num" aria-hidden="true">3</span>Je diensten in één oogopslag</li>
+        <li><span class="pin-num" aria-hidden="true">4</span>Reviews en openingstijden zonder zoeken</li>
+      </ol>
+    </div>
+  </div>
+</section>
